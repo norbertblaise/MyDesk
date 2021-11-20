@@ -1,0 +1,103 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyDesk" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="colorOnSurface">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/transparent</item>
+        <!-- Customize your theme here. -->
+
+        <!--TextInputLayout style -->
+        <item name="textInputStyle">@style/Widget.MyDesk.TextInputLayout</item>
+
+        <!--Component shapes -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.MyDesk.SmallComponent
+        </item>
+
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.MyDesk.MediumComponent
+        </item>
+    </style>
+
+    <!--Toolbar style-->
+    <style name="Theme.MyDesk.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Widget.MyDesk.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MyDesk.Toolbar</item>
+        <item name="titleTextAppearance">@style/TextAppearance.MyDesk.Headline6</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.MyDesk.Subtitle1</item>
+    </style>
+
+    <style name="ThemeOverlay.MyDesk.Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/dark_blue_grey</item>
+    </style>
+
+    <style name="TextAppearance.MyDesk.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <!-- <item name="fontFamily">@font/montserrat</item>
+         <item name="android:fontFamily">@font/montserrat</item> -->
+    </style>
+
+    <style name="TextAppearance.MyDesk.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <!--<item name="fontFamily">@font/montserrat</item>
+        <item name="android:fontFamily">@font/montserrat</item> -->
+    </style>
+
+
+    <style name="Theme.MyDesk.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MyDesk.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--ShapeableImageView style -->
+    <style name="ShapeAppearanceOverlay.MyDesk.CornerSize13Dp" parent="">
+        <item name="cornerSize">13dp</item>
+    </style>
+
+    <!--text input style -->
+
+    <style name="TextAppearance.MyDesk.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/open_sans</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+
+    </style>
+
+    <style name="Widget.MyDesk.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MyDesk.TextInputLayout</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MyDesk.SmallComponent</item>
+        <item name="hintTextColor">?attr/colorOnSurface</item>
+
+    </style>
+
+    <style name="ThemeOverlay.MyDesk.TextInputLayout" parent="">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="boxStrokeColor">@color/purple_500_60</item>
+        <item name="colorOnSurface">@color/purple_700</item>
+        <item name="colorError">@android:color/holo_red_light</item>
+        <item name="boxBackgroundColor">@color/purple_100</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.MyDesk.Subtitle1</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.MyDesk.Caption</item>
+    </style>
+
+    <!--ShapeAppearance -->
+    <style name="ShapeAppearance.MyDesk.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">13dp</item>
+    </style>
+
+    <style name="ShapeAppearance.MyDesk.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">13dp</item>
+    </style>
+</resources>

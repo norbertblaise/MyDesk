@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:style="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="16dp"
+    app:cardCornerRadius="13dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:contentDescription="@string/content_description_media"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/desk_image_3" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/setup_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semi_bold"
+                android:textColor="@color/dark_blue_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Fire &amp; Ice Setup" />
+
+<!--            <com.like.LikeButton-->
+<!--                android:id="@+id/like_"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="4dp"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                app:anim_scale_factor="2"-->
+<!--                app:circle_end_color="#12A518"-->
+<!--                app:circle_start_color="#F1DD31"-->
+<!--                app:dots_primary_color="#0E77CC"-->
+<!--                app:dots_secondary_color="#FF1A4F"-->
+<!--                app:icon_size="4dp"-->
+<!--                app:icon_type="heart"-->
+<!--                app:is_enabled="true"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/likes_count"-->
+<!--                app:liked="false" />-->
+            <CheckBox
+                android:id="@+id/like_button"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:button="@drawable/setup_favourite"
+                android:textColorHint="@color/material_on_surface_emphasis_high_type"
+                android:buttonTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/likes_count"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/likes_count" />
+
+
+            <TextView
+                android:id="@+id/likes_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_constraintTop_toTopOf="setup_name"
+                android:fontFamily="@font/inter_semi_bold"
+                android:textColor="@color/dark_blue_grey"
+                app:layout_constraintEnd_toStartOf="@+id/like_button"
+                tools:text="700likes" />
+
+            <TextView
+                android:id="@+id/setup_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_constraintRight_toRightOf="like_button"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter_regular"
+                android:maxLines="3"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toLeftOf="setup_name"
+                app:layout_constraintTop_toBottomOf="@+id/setup_name"
+                tools:text="@string/lorem_ipsum" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
