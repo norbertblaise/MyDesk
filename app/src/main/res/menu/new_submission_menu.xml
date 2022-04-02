@@ -3,11 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/action_create_new_submission"
-        android:icon="@drawable/ic_add"
-        android:title="Submit your own"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/action_confirm_submission"
         android:icon="@drawable/ic_checkmark"
         android:title="Confirm your Submission"

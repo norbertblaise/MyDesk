@@ -121,7 +121,7 @@
                         android:fontFamily="@font/inter_semi_bold"
                         android:text="About"
                         android:textColor="@color/black"
-                        android:textsize="16sp"
+                        android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -132,7 +132,7 @@
                         android:layout_marginBottom="24dp"
                         android:scrollHorizontally="false"
                         android:fontFamily="@font/inter_regular"
-                        android:text_color="@color/black"
+                        android:textColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/about_card_label"
                         app:layout_constraintTop_toBottomOf="@+id/about_card_label"
@@ -190,7 +190,7 @@
                             android:id="@+id/link_url"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontfamily="@font/inter_medium"
+                            android:fontFamily="@font/inter_medium"
                             app:layout_constraintStart_toEndOf="@+id/link_label"
                             app:layout_constraintTop_toTopOf="@+id/link_label" />
                     </androidx.constraintlayout.widget.ConstraintLayout>

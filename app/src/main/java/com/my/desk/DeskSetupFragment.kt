@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.my.desk.databinding.FragmentDeskSetupBinding
+import com.my.desk.databinding.FragmentSetupDetailBinding
 
 
 /**
@@ -14,7 +14,7 @@ import com.my.desk.databinding.FragmentDeskSetupBinding
  */
 class DeskSetupFragment : Fragment() {
 
-    private var _binding: FragmentDeskSetupBinding? = null
+    private var _binding: FragmentSetupDetailBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,7 +25,7 @@ class DeskSetupFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentDeskSetupBinding.inflate(inflater, container, false)
+        _binding = FragmentSetupDetailBinding.inflate(inflater, container, false)
         return binding.root
 
     }

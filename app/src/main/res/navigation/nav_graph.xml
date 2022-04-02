@@ -3,26 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/FeedFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/FeedFragment"
         android:name="com.my.desk.FeedFragment"
-        android:label="@string/first_fragment_label"
+        android:label="My Desk"
         tools:layout="@layout/fragment_setup_feed">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_FeedFragment_to_SetupDetailFragment"
+            app:destination="@id/SetupDetailFragment" />
+        <action
+            android:id="@+id/action_FeedFragment_to_AddSetupFragment"
+            app:destination="@id/addSetupFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/SetupDetailFragment"
         android:name="com.my.desk.DeskSetupFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_setup_detail">
-
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_SetupDetailFragment_to_FeedFragment"
+            app:destination="@id/FeedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSetupFragment"
+        android:name="com.my.desk.AddSetupFragment"
+        android:label="Submit Yours"
+        tools:layout="@layout/fragment_add_setup">
+        <action
+            android:id="@+id/action_addSetupFragment_to_FeedFragment"
+            app:destination="@id/FeedFragment" />
     </fragment>
 </navigation>

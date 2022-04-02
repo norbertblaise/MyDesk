@@ -9,13 +9,18 @@
         <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/drawable/setup_favourite.xml" value="0.21561181434599155" />
         <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/drawable/splash_screen_illustration.xml" value="0.20925925925925926" />
         <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/font/roboto.xml" value="0.2270042194092827" />
+        <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/layout/activity_main.xml" value="0.20512820512820512" />
+        <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/layout/content_main.xml" value="0.20512820512820512" />
+        <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/layout/fragment_add_setup.xml" value="0.20512820512820512" />
         <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/layout/fragment_desk_setup.xml" value="0.20854700854700856" />
         <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/layout/fragment_feed.xml" value="0.1306532663316583" />
         <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/layout/fragment_setup_detail.xml" value="0.2" />
+        <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/layout/fragment_setup_feed.xml" value="0.1" />
         <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/layout/login_fragment.xml" value="0.2" />
-        <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/layout/register_fragment.xml" value="0.20854700854700856" />
+        <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/layout/register_fragment.xml" value="0.536" />
         <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/layout/setup_post_rv_row.xml" value="0.16" />
         <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/menu/menu_main.xml" value="0.20854700854700856" />
+        <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/menu/new_submission_menu.xml" value="0.1" />
         <entry key="..\:/Users/Norbert/AndroidStudioProjects/MyDesk/app/src/main/res/menu/top_app_bar.xml" value="0.20854700854700856" />
       </map>
     </option>
