@@ -11,8 +11,12 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.AddCircle
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.ArrowBack
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -23,6 +27,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.composethemeadapter.MdcTheme
 
 
@@ -53,7 +58,29 @@ class AddSetupFragment : Fragment() {
         ComposeView(requireContext()).apply {
             setContent {
                 MdcTheme {
-                    AddMySetup()
+                    Scaffold(topBar = {
+                        TopAppBar(
+                            navigationIcon = {
+                                IconButton(onClick = { findNavController().navigate(R.id.action_addSetupFragment_to_FeedFragment) },) {
+Icon(Icons.Outlined.ArrowBack, contentDescription = "back button", tint =  Color.Black)
+                                }
+                            },
+                            elevation = 0.dp,
+                            backgroundColor = MaterialTheme.colors.background,
+                            contentColor = Color.Black,
+                            title = { Text(text = "Add Setup") },
+                            actions = {
+                                IconButton(onClick = { /*TODO*/
+                                }) {
+                                    Icon(Icons.Filled.Check, contentDescription = "")
+                                }
+                            }
+                        )
+                    },
+                        content = {
+                            AddMySetup()
+                        })
+
                 }
             }
         }

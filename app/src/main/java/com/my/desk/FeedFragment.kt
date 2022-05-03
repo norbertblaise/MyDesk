@@ -5,6 +5,7 @@ import android.view.*
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -42,6 +43,8 @@ class FeedFragment : Fragment() {
                     color = MaterialTheme.colors.background
                 ) {
                     Scaffold(
+                        modifier = Modifier.padding(horizontal = 16.dp),
+
                         topBar = {
                             TopAppBar(
                                 elevation = 0.dp,
@@ -49,7 +52,8 @@ class FeedFragment : Fragment() {
                                 contentColor = Color.Black,
                                 title = { Text(text = "My Desk") },
                                 actions = {
-                                    IconButton(onClick = { /*TODO*/ }) {
+                                    IconButton(onClick = { /*TODO*/
+                                    findNavController().navigate(R.id.action_FeedFragment_to_AddSetupFragment)}) {
                                         Icon(Icons.Filled.Add, contentDescription = "")
                                     }
                                 }
@@ -59,7 +63,7 @@ class FeedFragment : Fragment() {
                             Column {
                                 Text(text = "Featured", fontSize = 20.sp)
                                 Image(
-                                    painter = painterResource(id = R.drawable.desk_image_1),
+                                    painter = painterResource(id = R.drawable.splash_screen_illustration),
                                     contentDescription = ""
                                 )
                                 Text(text = "Popular", fontSize = 20.sp)
