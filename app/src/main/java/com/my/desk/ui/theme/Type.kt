@@ -10,7 +10,7 @@ import com.my.desk.R
 
 // Set of Material typography styles to start with
 val openSans = FontFamily(
-    Font(R.font.open_sans, weight= FontWeight.Normal),
+    Font(R.font.open_sans, weight = FontWeight.Normal),
     Font(R.font.open_sans_semibold, weight = FontWeight.SemiBold),
     Font(R.font.open_sans_bold, weight = FontWeight.Bold)
 )
@@ -20,6 +20,10 @@ val inter = FontFamily(
     Font(R.font.inter_medium, weight = FontWeight.Medium),
     Font(R.font.inter_semi_bold, weight = FontWeight.SemiBold),
     Font(R.font.inter_bold, weight = FontWeight.Bold)
+)
+val montserrat = FontFamily(
+    Font(R.font.montserrat, weight = FontWeight.Normal),
+    Font(R.font.montserrat_medium, weight = FontWeight.Medium)
 )
 val Typography = Typography(
     body1 = TextStyle(
@@ -31,6 +35,11 @@ val Typography = Typography(
         fontFamily = openSans,
         fontWeight = FontWeight.Normal,
         fontSize = 12.sp
+    ),
+    h1 = TextStyle(
+        fontFamily = montserrat,
+        fontWeight = FontWeight.Medium,
+        fontSize = 39.sp
     )
     /* Other default text styles to override
     button = TextStyle(
