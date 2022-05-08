@@ -12,20 +12,12 @@
         tools:layout="@layout/fragment_setup_feed">
 
         <action
-            android:id="@+id/action_FeedFragment_to_SetupDetailFragment"
-            app:destination="@id/SetupDetailFragment" />
-        <action
             android:id="@+id/action_FeedFragment_to_AddSetupFragment"
             app:destination="@id/addSetupFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/SetupDetailFragment"
-        android:name="com.my.desk.DeskSetupFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_setup_detail">
         <action
-            android:id="@+id/action_SetupDetailFragment_to_FeedFragment"
-            app:destination="@id/FeedFragment" />
+            android:id="@+id/action_FeedFragment_to_deskSetupFragment"
+            app:destination="@id/deskSetupFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/addSetupFragment"
@@ -34,6 +26,15 @@
         tools:layout="@layout/fragment_add_setup">
         <action
             android:id="@+id/action_addSetupFragment_to_FeedFragment"
+            app:destination="@id/FeedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deskSetupFragment"
+        android:name="com.my.desk.DeskSetupFragment"
+        android:label="fragment_setup_detail"
+        tools:layout="@layout/fragment_setup_detail" >
+        <action
+            android:id="@+id/action_deskSetupFragment_to_FeedFragment"
             app:destination="@id/FeedFragment" />
     </fragment>
 </navigation>

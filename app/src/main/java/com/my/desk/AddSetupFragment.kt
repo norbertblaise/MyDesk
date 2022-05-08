@@ -58,25 +58,30 @@ class AddSetupFragment : Fragment() {
         ComposeView(requireContext()).apply {
             setContent {
                 MdcTheme {
-                    Scaffold(topBar = {
-                        TopAppBar(
-                            navigationIcon = {
-                                IconButton(onClick = { findNavController().navigate(R.id.action_addSetupFragment_to_FeedFragment) },) {
-Icon(Icons.Outlined.ArrowBack, contentDescription = "back button", tint =  Color.Black)
+                    Scaffold(
+                        topBar = {
+                            TopAppBar(
+                                navigationIcon = {
+                                    IconButton(onClick = { findNavController().navigate(R.id.action_addSetupFragment_to_FeedFragment) }) {
+                                        Icon(
+                                            Icons.Outlined.ArrowBack,
+                                            contentDescription = "back button",
+                                            tint = Color.Black
+                                        )
+                                    }
+                                },
+                                elevation = 0.dp,
+                                backgroundColor = MaterialTheme.colors.background,
+                                contentColor = Color.Black,
+                                title = { Text(text = "Add Setup") },
+                                actions = {
+                                    IconButton(onClick = { /*TODO*/
+                                    }) {
+                                        Icon(Icons.Filled.Check, contentDescription = "")
+                                    }
                                 }
-                            },
-                            elevation = 0.dp,
-                            backgroundColor = MaterialTheme.colors.background,
-                            contentColor = Color.Black,
-                            title = { Text(text = "Add Setup") },
-                            actions = {
-                                IconButton(onClick = { /*TODO*/
-                                }) {
-                                    Icon(Icons.Filled.Check, contentDescription = "")
-                                }
-                            }
-                        )
-                    },
+                            )
+                        },
                         content = {
                             AddMySetup()
                         })

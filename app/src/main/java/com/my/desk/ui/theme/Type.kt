@@ -27,7 +27,7 @@ val montserrat = FontFamily(
 )
 val Typography = Typography(
     body1 = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = inter,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
     ),
@@ -40,6 +40,17 @@ val Typography = Typography(
         fontFamily = montserrat,
         fontWeight = FontWeight.Medium,
         fontSize = 39.sp
+    ),
+    subtitle1 = TextStyle(
+        fontFamily = inter,
+        fontWeight = FontWeight.Bold,
+        fontSize = 20.sp
+    ),
+
+    h6 = TextStyle(
+        fontFamily = inter,
+        fontWeight = FontWeight.Bold,
+        fontSize = 16.sp
     )
     /* Other default text styles to override
     button = TextStyle(

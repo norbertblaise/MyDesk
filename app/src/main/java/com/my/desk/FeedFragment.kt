@@ -3,9 +3,7 @@ package com.my.desk
 import android.os.Bundle
 import android.view.*
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -18,6 +16,7 @@ import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.composethemeadapter.MdcTheme
+import com.my.desk.ui.components.SetupPostCard
 //import com.my.desk.databinding.FragmentSetupFeedBinding
 import com.my.desk.ui.theme.MyDeskTheme
 
@@ -67,7 +66,13 @@ class FeedFragment : Fragment() {
                                     contentDescription = ""
                                 )
                                 Text(text = "Popular", fontSize = 20.sp)
-
+                                Spacer(modifier = Modifier.height(20.dp))
+                                Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                                    SetupPostCard()
+                                    SetupPostCard()
+                                    SetupPostCard()
+                                    SetupPostCard()
+                                }
 
                             }
                         },
