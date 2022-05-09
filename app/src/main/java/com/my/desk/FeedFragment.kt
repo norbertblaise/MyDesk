@@ -52,7 +52,8 @@ class FeedFragment : Fragment() {
                                 title = { Text(text = "My Desk") },
                                 actions = {
                                     IconButton(onClick = { /*TODO*/
-                                    findNavController().navigate(R.id.action_FeedFragment_to_AddSetupFragment)}) {
+                                        findNavController().navigate(R.id.action_FeedFragment_to_AddSetupFragment)
+                                    }) {
                                         Icon(Icons.Filled.Add, contentDescription = "")
                                     }
                                 }
@@ -68,10 +69,10 @@ class FeedFragment : Fragment() {
                                 Text(text = "Popular", fontSize = 20.sp)
                                 Spacer(modifier = Modifier.height(20.dp))
                                 Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                                    SetupPostCard()
-                                    SetupPostCard()
-                                    SetupPostCard()
-                                    SetupPostCard()
+                                    SetupPostCard(onClick = { findNavController().navigate(R.id.action_FeedFragment_to_SetupDetailFragment) })
+                                    SetupPostCard(onClick = { findNavController().navigate(R.id.action_FeedFragment_to_SetupDetailFragment) })
+                                    SetupPostCard(onClick = { findNavController().navigate(R.id.action_FeedFragment_to_SetupDetailFragment) })
+                                    SetupPostCard(onClick = { findNavController().navigate(R.id.action_FeedFragment_to_SetupDetailFragment) })
                                 }
 
                             }

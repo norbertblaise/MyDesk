@@ -2,6 +2,7 @@ package com.my.desk.ui.components
 
 import com.my.desk.R
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -28,13 +29,15 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.NavHostFragment.findNavController
 
 @Composable
-fun SetupPostCard() {
+fun SetupPostCard(
+    onClick: () -> Unit
+) {
     val context = LocalContext.current
-    Card(shape = RoundedCornerShape(12.dp),
-//    onClick = {
-////        NavHostFragment.findNavController(this).navigate(R.id.action_FeedFragment_to_SetupDetailFragment)
-//    }
-    ) {
+
+    Card(
+        shape = RoundedCornerShape(12.dp),
+        modifier = Modifier.clickable(onClick = onClick)
+    ){
         Column {
             Image(
                 painter = painterResource(id = R.drawable.desk_image_2),
@@ -85,5 +88,5 @@ fun SetupPostCard() {
 @Preview(showBackground = false)
 @Composable
 fun SetupPostCardPreview() {
-    SetupPostCard()
+    SetupPostCard(onClick = {})
 }
