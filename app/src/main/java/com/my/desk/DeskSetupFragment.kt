@@ -34,7 +34,7 @@ class DeskSetupFragment : Fragment() {
                     topBar = {
                         TopAppBar(
                             navigationIcon = {
-                                IconButton(onClick = { findNavController().navigate(R.id.action_SetupDetailFragment_to_FeedFragment) }) {
+                                IconButton(onClick = { findNavController().navigate(R.id.action_addSetupFragment_to_FeedFragment) }) {
                                     Icon(
                                         Icons.Outlined.ArrowBack,
                                         contentDescription = "back button",

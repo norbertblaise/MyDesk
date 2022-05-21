@@ -144,6 +144,8 @@ fun LoginForm() {
 
                     }
                     Spacer(modifier = Modifier.padding(vertical = 4.dp))
+
+                    Spacer(modifier = Modifier.padding(vertical = 4.dp))
                     Row (modifier = Modifier.padding(bottom = 16.dp)){
 
                         Text(text = "Don't have an Account? ")

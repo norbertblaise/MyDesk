@@ -69,10 +69,10 @@ class FeedFragment : Fragment() {
                                 Text(text = "Popular", fontSize = 20.sp)
                                 Spacer(modifier = Modifier.height(20.dp))
                                 Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                                    SetupPostCard(onClick = { findNavController().navigate(R.id.action_FeedFragment_to_SetupDetailFragment) })
-                                    SetupPostCard(onClick = { findNavController().navigate(R.id.action_FeedFragment_to_SetupDetailFragment) })
-                                    SetupPostCard(onClick = { findNavController().navigate(R.id.action_FeedFragment_to_SetupDetailFragment) })
-                                    SetupPostCard(onClick = { findNavController().navigate(R.id.action_FeedFragment_to_SetupDetailFragment) })
+                                    SetupPostCard(onClick = { findNavController().navigate(R.id.action_FeedFragment_to_deskSetupFragment) })
+                                    SetupPostCard(onClick = { findNavController().navigate(R.id.action_FeedFragment_to_deskSetupFragment) })
+                                    SetupPostCard(onClick = { findNavController().navigate(R.id.action_FeedFragment_to_deskSetupFragment) })
+                                    SetupPostCard(onClick = { findNavController().navigate(R.id.action_FeedFragment_to_deskSetupFragment) })
                                 }
 
                             }
