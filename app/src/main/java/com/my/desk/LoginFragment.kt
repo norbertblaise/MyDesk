@@ -9,6 +9,7 @@ import androidx.compose.foundation.text.ClickableText
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
@@ -70,10 +71,12 @@ fun LoginForm() {
         Surface(color = Color.White) {
             Box(modifier = Modifier.fillMaxSize()){
                 Column(
-                    modifier = Modifier.padding(
-                        horizontal = 16.dp,
-                        vertical = 16.dp
-                    ).align(Alignment.BottomCenter)
+                    modifier = Modifier
+                        .padding(
+                            horizontal = 16.dp,
+                            vertical = 16.dp
+                        )
+                        .align(Alignment.BottomCenter)
                 ) {
                     Text(
                         "Login", style = MaterialTheme.typography.h1,
@@ -144,7 +147,35 @@ fun LoginForm() {
 
                     }
                     Spacer(modifier = Modifier.padding(vertical = 4.dp))
+                    Row(modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center) {
+                        Text("Or Continue with", style = TextStyle(
+                            color = MaterialTheme.colors.primary, fontSize = 14.sp,
+                            fontWeight = FontWeight.Bold,
+                            fontFamily = inter
 
+                        ))
+                    }
+                    Spacer(modifier = Modifier.padding(vertical = 4.dp))
+                    Button(modifier = Modifier
+                        .fillMaxWidth()
+                        .height(44.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            backgroundColor =  DarkBlueGrey
+                        ),
+                        onClick = { /*TODO*/ }) {
+                        Row(horizontalArrangement = Arrangement.Center) {
+//                            Icon(imageVector = vector, contentDescription = )
+                            Text(
+                                "Google", color = Color.White,
+                                style = TextStyle(
+                                    fontWeight = FontWeight.Bold,
+                                    fontFamily = inter
+                                )
+                            )
+                        }
+
+                    }
                     Spacer(modifier = Modifier.padding(vertical = 4.dp))
                     Row (modifier = Modifier.padding(bottom = 16.dp)){
 
