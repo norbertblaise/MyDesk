@@ -30,6 +30,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
+import com.my.desk.ui.components.LogoedButton
 import com.my.desk.ui.theme.DarkBlueGrey
 import com.my.desk.ui.theme.MyDeskTheme
 import com.my.desk.ui.theme.Purple100
@@ -64,9 +65,11 @@ fun SignUpForm() {
         Surface(color = Color.White) {
             Box(modifier = Modifier.fillMaxSize()) {
                 Column(
-                    modifier = Modifier.padding(
-                        horizontal = 16.dp
-                    ).align(alignment = Alignment.BottomCenter)
+                    modifier = Modifier
+                        .padding(
+                            horizontal = 16.dp
+                        )
+                        .align(alignment = Alignment.BottomCenter)
                 ) {
                     Text(
                         "Register", style = MaterialTheme.typography.h1,
@@ -142,13 +145,37 @@ fun SignUpForm() {
 
                     }
                     Spacer(modifier = Modifier.padding(vertical = 4.dp))
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            "Or Continue with", style = TextStyle(
+                                color = MaterialTheme.colors.primary, fontSize = 14.sp,
+                                fontWeight = FontWeight.Normal,
+                                fontFamily = inter
+
+                            )
+                        )
+                    }
+                    Spacer(modifier = Modifier.padding(vertical = 4.dp))
+                    LogoedButton(
+                        logo = R.drawable.google_logo,
+                        backgroundColor = DarkBlueGrey,
+                        label = "Google",
+                        onClick = {/*todo run google login*/ }
+                    )
+                    Spacer(modifier = Modifier.padding(vertical = 4.dp))
                     Row(modifier = Modifier.padding(bottom = 16.dp)) {
 
-                        Text(text = "Already have an Account? ",
+                        Text(
+                            text = "Already have an Account? ",
                             style = TextStyle(
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Normal,
-                                fontFamily = inter)
+                                fontFamily = inter
+                            )
                         )
                         ClickableText(
                             onClick = {
@@ -171,6 +198,6 @@ fun SignUpForm() {
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewSignUpForm(){
+fun PreviewSignUpForm() {
     SignUpForm()
 }
