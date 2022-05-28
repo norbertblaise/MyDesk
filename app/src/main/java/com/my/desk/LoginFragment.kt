@@ -41,6 +41,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
 import com.my.desk.ui.components.LogoedButton
 import com.my.desk.ui.theme.MyDeskTheme
 import com.my.desk.ui.theme.*
@@ -58,7 +60,139 @@ class LoginFragment : Fragment() {
         return ComposeView(requireContext()).apply {
 
             setContent {
-                LoginForm()
+                var emailText by rememberSaveable { mutableStateOf("") }
+                var password by rememberSaveable { mutableStateOf("") }
+                var passwordHidden by rememberSaveable { mutableStateOf(true) }
+                val annotatedForgotPassword = buildAnnotatedString {
+                    append("Forgot Password")
+                }
+                val annotatedSignUp = buildAnnotatedString {
+                    append("SignUp")
+                }
+                MyDeskTheme() {
+                    Surface(color = Color.White) {
+                        Box(modifier = Modifier.fillMaxSize()) {
+                            Column(
+                                modifier = Modifier
+                                    .padding(
+                                        horizontal = 16.dp,
+                                        vertical = 16.dp
+                                    )
+                                    .align(Alignment.BottomCenter)
+                            ) {
+                                Text(
+                                    "Login", style = MaterialTheme.typography.h1,
+                                    color = DarkBlueGrey
+                                )
+                                Spacer(modifier = Modifier.padding(vertical = 16.dp))
+                                OutlinedTextField(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    value = emailText,
+                                    onValueChange = { emailText = it },
+                                    label = { Text(text = "Email") },
+                                    singleLine = true,
+                                    placeholder = { Text(text = "example@email.com") },
+                                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+                                    colors = TextFieldDefaults.outlinedTextFieldColors(
+                                        backgroundColor = Purple100,
+                                        unfocusedBorderColor = MaterialTheme.colors.primary
+                                    )
+                                )
+
+                                Spacer(modifier = Modifier.padding(vertical = 6.dp))
+
+                                OutlinedTextField(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    value = password, onValueChange = { password = it },
+                                    label = { Text("Password") },
+                                    singleLine = true,
+                                    visualTransformation = if (passwordHidden) PasswordVisualTransformation() else VisualTransformation.None,
+                                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+                                    trailingIcon = {
+                                        IconButton(onClick = { passwordHidden = !passwordHidden }) {
+                                            val visibilityIcon =
+                                                if (passwordHidden) Icons.Filled.Visibility else Icons.Filled.VisibilityOff
+                                            val description =
+                                                if (passwordHidden) "Show Password" else "Hide Password"
+                                            Icon(imageVector = visibilityIcon, contentDescription = description)
+                                        }
+                                    },
+                                    colors = TextFieldDefaults.outlinedTextFieldColors(
+                                        backgroundColor = Purple100,
+                                        unfocusedBorderColor = MaterialTheme.colors.primary
+                                    )
+                                )
+
+                                Spacer(modifier = Modifier.padding(vertical = 4.dp))
+                                ClickableText(
+                                    onClick = {
+                                        //todo go to password reset page
+                                    },
+                                    text = annotatedForgotPassword, style = TextStyle(
+                                        color = MaterialTheme.colors.primary, fontSize = 14.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        fontFamily = inter
+
+                                    )
+                                )
+                                Spacer(modifier = Modifier.padding(vertical = 4.dp))
+                                Button(modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(44.dp), onClick = { /*TODO*/ }) {
+                                    Text(
+                                        "Login", color = Color.White,
+                                        style = TextStyle(
+                                            fontWeight = FontWeight.Normal,
+                                            fontFamily = inter
+                                        )
+                                    )
+
+                                }
+                                Spacer(modifier = Modifier.padding(vertical = 4.dp))
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.Center,
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Text(
+                                        "Or Continue with", style = TextStyle(
+                                            color = MaterialTheme.colors.primary, fontSize = 14.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            fontFamily = inter
+
+                                        )
+                                    )
+                                }
+                                Spacer(modifier = Modifier.padding(vertical = 4.dp))
+                                LogoedButton(
+                                    logo = R.drawable.google_logo,
+                                    backgroundColor = DarkBlueGrey,
+                                    label = "Google",
+                                    onClick = {/*todo runn google login*/}
+                                )
+                                Spacer(modifier = Modifier.padding(vertical = 4.dp))
+                                Row(modifier = Modifier.padding(bottom = 16.dp)) {
+
+                                    Text(text = "Don't have an Account? ")
+                                    ClickableText(
+                                        onClick = {
+                                            //todo go to sign up page
+                                                  findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
+                                        },
+                                        text = annotatedSignUp, style = TextStyle(
+                                            color = MaterialTheme.colors.primary, fontSize = 14.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            fontFamily = inter
+
+                                        )
+                                    )
+                                }
+                            }
+                        }
+
+                    }
+
+                }
             }
         }
     }
@@ -183,6 +317,7 @@ fun LoginForm() {
                         ClickableText(
                             onClick = {
                                 //todo go to sign up page
+
                             },
                             text = annotatedSignUp, style = TextStyle(
                                 color = MaterialTheme.colors.primary, fontSize = 14.sp,
