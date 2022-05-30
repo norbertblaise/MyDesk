@@ -127,6 +127,8 @@ class LoginFragment : Fragment() {
                                 ClickableText(
                                     onClick = {
                                         //todo go to password reset page
+                                        findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
+
                                     },
                                     text = annotatedForgotPassword, style = TextStyle(
                                         color = MaterialTheme.colors.primary, fontSize = 14.sp,
@@ -267,6 +269,7 @@ fun LoginForm() {
                     ClickableText(
                         onClick = {
                             //todo go to password reset page
+
                         },
                         text = annotatedForgotPassword, style = TextStyle(
                             color = MaterialTheme.colors.primary, fontSize = 14.sp,
