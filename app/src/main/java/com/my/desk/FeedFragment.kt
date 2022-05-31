@@ -51,7 +51,7 @@ class FeedFragment : Fragment() {
                                 contentColor = Color.Black,
                                 title = { Text(text = "My Desk") },
                                 actions = {
-                                    IconButton(onClick = { /*TODO*/
+                                    IconButton(onClick = {
                                         findNavController().navigate(R.id.action_FeedFragment_to_AddSetupFragment)
                                     }) {
                                         Icon(Icons.Filled.Add, contentDescription = "")
