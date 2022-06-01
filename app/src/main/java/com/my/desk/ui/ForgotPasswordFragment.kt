@@ -63,6 +63,7 @@ class ForgotPasswordFragment : Fragment() {
                             },
                             content = {
                                 Column {
+                                    Text(text="Enter your Email")
                                     OutlinedTextField(
                                         modifier = Modifier.fillMaxWidth(),
                                         value = emailText,
