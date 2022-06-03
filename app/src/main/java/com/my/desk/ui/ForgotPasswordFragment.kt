@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.my.desk.R
+import com.my.desk.ui.theme.DarkBlueGrey
 import com.my.desk.ui.theme.MyDeskTheme
 import com.my.desk.ui.theme.Purple100
 import com.my.desk.ui.theme.inter
@@ -98,7 +99,7 @@ fun RecoverPass(){
     Column {
         Text(text="Enter your Email",
             style = TextStyle(
-                color = MaterialTheme.colors.primary, fontSize = 16.sp,
+                color = DarkBlueGrey, fontSize = 16.sp,
                 fontWeight = FontWeight.Bold,
                 fontFamily = inter
 
