@@ -119,6 +119,19 @@ fun RecoverPass(){
                 unfocusedBorderColor = MaterialTheme.colors.primary
             )
         )
+        Spacer(modifier = Modifier.padding(vertical = 4.dp))
+        Button(modifier = Modifier
+            .fillMaxWidth()
+            .height(44.dp), onClick = { /*TODO*/ }) {
+            Text(
+                "Reset Password", color = Color.White,
+                style = TextStyle(
+                    fontWeight = FontWeight.Normal,
+                    fontFamily = inter
+                )
+            )
+
+        }
     }
 }
 
