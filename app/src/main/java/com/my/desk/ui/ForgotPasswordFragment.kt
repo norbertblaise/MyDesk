@@ -67,8 +67,19 @@ class ForgotPasswordFragment : Fragment() {
                                 )
                             },
                             content = {
-                                Column {
-                                    Text(text="Enter your Email")
+                                Column(
+                                    modifier = Modifier.fillMaxSize(),
+                                    verticalArrangement = Arrangement.Center
+                                ) {
+                                    Text(text="Enter your Email",
+                                        style = TextStyle(
+                                            color = DarkBlueGrey, fontSize = 16.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            fontFamily = inter
+
+                                        )
+                                    )
+                                    Spacer(modifier = Modifier.height(8.dp))
                                     OutlinedTextField(
                                         modifier = Modifier.fillMaxWidth(),
                                         value = emailText,
@@ -82,6 +93,19 @@ class ForgotPasswordFragment : Fragment() {
                                             unfocusedBorderColor = MaterialTheme.colors.primary
                                         )
                                     )
+                                    Spacer(modifier = Modifier.padding(vertical = 8.dp))
+                                    Button(modifier = Modifier
+                                        .fillMaxWidth()
+                                        .height(44.dp), onClick = { /*TODO*/ }) {
+                                        Text(
+                                            "Reset Password", color = Color.White,
+                                            style = TextStyle(
+                                                fontWeight = FontWeight.Normal,
+                                                fontFamily = inter
+                                            )
+                                        )
+
+                                    }
                                 }
                             }
                         )
@@ -96,7 +120,10 @@ class ForgotPasswordFragment : Fragment() {
 fun RecoverPass(){
     var emailText by rememberSaveable { mutableStateOf("") }
 
-    Column {
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center
+    ) {
         Text(text="Enter your Email",
             style = TextStyle(
                 color = DarkBlueGrey, fontSize = 16.sp,
@@ -119,7 +146,7 @@ fun RecoverPass(){
                 unfocusedBorderColor = MaterialTheme.colors.primary
             )
         )
-        Spacer(modifier = Modifier.padding(vertical = 4.dp))
+        Spacer(modifier = Modifier.padding(vertical = 8.dp))
         Button(modifier = Modifier
             .fillMaxWidth()
             .height(44.dp), onClick = { /*TODO*/ }) {
