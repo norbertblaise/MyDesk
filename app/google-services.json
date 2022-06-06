@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1085374529499",
+    "project_id": "mydesk-5b976",
+    "storage_bucket": "mydesk-5b976.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085374529499:android:d691d8b3b69232250e31fe",
+        "android_client_info": {
+          "package_name": "com.my.desk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085374529499-711jhqn4r0u6g6s8oeeadeef5bvmgm2u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.my.desk",
+            "certificate_hash": "8fbd1aa445bbba6f2bb96e001c2079a110e47985"
+          }
+        },
+        {
+          "client_id": "1085374529499-ika7l05t9mjfn4216boc80j7dfoocunu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-hMjSA8Ldc3gs_8lyMyVblyibCP_MfR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085374529499-ika7l05t9mjfn4216boc80j7dfoocunu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
