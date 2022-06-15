@@ -7,5 +7,5 @@ data class User(
 
 ) {
 
-    val userId: String? = null
+    var userId: String? = null
 }
