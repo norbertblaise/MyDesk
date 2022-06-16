@@ -25,6 +25,10 @@ import com.google.android.material.composethemeadapter.MdcTheme
 import com.my.desk.ui.theme.MyDeskTheme
 
 class HomeActivity : ComponentActivity() {
+    override fun onStart() {
+        super.onStart()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
