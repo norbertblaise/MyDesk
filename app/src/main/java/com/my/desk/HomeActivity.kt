@@ -29,6 +29,11 @@ class HomeActivity : ComponentActivity() {
         super.onStart()
     }
 
+    override fun onResume() {
+        super.onResume()
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
