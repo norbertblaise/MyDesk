@@ -22,9 +22,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.google.android.material.composethemeadapter.MdcTheme
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.my.desk.ui.theme.MyDeskTheme
 
 class HomeActivity : ComponentActivity() {
+
+    private lateinit var mAuth: FirebaseAuth
+    private lateinit var loggedUser: FirebaseUser
+
     override fun onStart() {
         super.onStart()
     }
