@@ -33,6 +33,7 @@ class HomeActivity : ComponentActivity() {
 
     override fun onStart() {
         super.onStart()
+        mAuth = FirebaseAuth.getInstance()
     }
 
     override fun onResume() {
