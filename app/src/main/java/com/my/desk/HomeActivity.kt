@@ -34,6 +34,7 @@ class HomeActivity : ComponentActivity() {
     override fun onStart() {
         super.onStart()
         mAuth = FirebaseAuth.getInstance()
+        val loggedUser = mAuth.currentUser
     }
 
     override fun onResume() {
