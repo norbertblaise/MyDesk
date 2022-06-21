@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_FeedFragment_to_deskSetupFragment"
             app:destination="@id/deskSetupFragment" />
+        <action
+            android:id="@+id/action_FeedFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
 
     </fragment>
     <fragment

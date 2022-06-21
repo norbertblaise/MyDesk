@@ -16,6 +16,8 @@ import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.composethemeadapter.MdcTheme
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.my.desk.ui.components.SetupPostCard
 //import com.my.desk.databinding.FragmentSetupFeedBinding
 import com.my.desk.ui.theme.MyDeskTheme
@@ -30,6 +32,22 @@ class FeedFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
 //    private val binding get() = _binding!!
+
+    private lateinit var mAuth: FirebaseAuth
+    private lateinit var loggedUser: FirebaseUser
+
+    override fun onStart() {
+        super.onStart()
+        mAuth = FirebaseAuth.getInstance()
+        val loggedUser = mAuth.currentUser
+        if(loggedUser == null){
+            findNavController().navigate(R.id.action_FeedFragment_to_loginFragment)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
