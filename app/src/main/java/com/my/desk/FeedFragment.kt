@@ -47,6 +47,10 @@ class FeedFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
+        if(loggedUser == null){
+            findNavController().navigate(R.id.action_FeedFragment_to_loginFragment)
+        }
+
     }
 
     override fun onCreateView(
