@@ -43,6 +43,8 @@ import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.my.desk.ui.components.LogoedButton
 import com.my.desk.ui.theme.MyDeskTheme
 import com.my.desk.ui.theme.*
@@ -50,6 +52,8 @@ import com.my.desk.ui.theme.inter
 
 class LoginFragment : Fragment() {
 
+    private lateinit var mAuth: FirebaseAuth
+    private lateinit var currentUser: FirebaseUser
 
     override fun onCreateView(
         inflater: LayoutInflater,
