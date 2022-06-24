@@ -43,6 +43,7 @@ import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.my.desk.ui.components.LogoedButton
@@ -55,6 +56,16 @@ class LoginFragment : Fragment() {
     private lateinit var mAuth: FirebaseAuth
     private lateinit var currentUser: FirebaseUser
 
+    private fun login(email: String, password: String){
+        mAuth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener{task ->
+                if(task.isSuccessful){
+                    findNavController().navigate(R.id.action_loginFragment_to_FeedFragment)
+                }else{
+                    //todo handle any sign in error
+                }
+            }
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
