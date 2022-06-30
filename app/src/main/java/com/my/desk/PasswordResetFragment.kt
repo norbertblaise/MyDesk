@@ -63,6 +63,7 @@ class PasswordResetFragment : Fragment() {
                                         unfocusedBorderColor = colors.primary
                                     )
                                 )
+                                Spacer(modifier= Modifier.padding(vertical = 16.dp))
 
                             }
                         }
