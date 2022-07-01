@@ -17,6 +17,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
@@ -24,6 +26,7 @@ import androidx.fragment.app.Fragment
 import com.my.desk.ui.theme.DarkBlueGrey
 import com.my.desk.ui.theme.MyDeskTheme
 import com.my.desk.ui.theme.Purple100
+import com.my.desk.ui.theme.inter
 
 class PasswordResetFragment : Fragment() {
     override fun onCreateView(
@@ -64,6 +67,18 @@ class PasswordResetFragment : Fragment() {
                                     )
                                 )
                                 Spacer(modifier= Modifier.padding(vertical = 16.dp))
+                                Button(modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(44.dp), onClick = { /*TODO initial sign up*/ }) {
+                                    Text(
+                                        "Sign Up", color = Color.White,
+                                        style = TextStyle(
+                                            fontWeight = FontWeight.Bold,
+                                            fontFamily = inter
+                                        )
+                                    )
+
+                                }
 
                             }
                         }
