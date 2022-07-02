@@ -67,6 +67,7 @@ class PasswordResetFragment : Fragment() {
                                     )
                                 )
                                 Spacer(modifier= Modifier.padding(vertical = 16.dp))
+                                Text("Didn't recieve email?")
                                 Button(modifier = Modifier
                                     .fillMaxWidth()
                                     .height(44.dp), onClick = { /*TODO initial sign up*/ }) {
