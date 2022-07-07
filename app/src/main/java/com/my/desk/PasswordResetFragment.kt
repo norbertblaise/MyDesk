@@ -73,7 +73,7 @@ class PasswordResetFragment : Fragment() {
                                     .fillMaxWidth()
                                     .height(44.dp), onClick = { /*TODO initial sign up*/ }) {
                                     Text(
-                                        "Sign Up", color = Color.White,
+                                        "Send Email", color = Color.White,
                                         style = TextStyle(
                                             fontWeight = FontWeight.Bold,
                                             fontFamily = inter
